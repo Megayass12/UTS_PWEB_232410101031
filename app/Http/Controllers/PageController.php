@@ -13,23 +13,19 @@ class PageController extends Controller
 
     public function authenticate(Request $request)
     {
-       // Ambil input dari form
     $username = $request->input('username');
     $password = $request->input('password');
 
-    // Validasi username dan password
     if ($username === 'mega' && $password === '123') {
-        // Jika valid, redirect ke dashboard dengan parameter username
         return redirect()->route('dashboard', ['username' => $username]);
     }
 
-    // Jika tidak valid, redirect kembali ke halaman login dengan error message
     return redirect()->route('login')->with('error', 'Username atau password salah.');
     }
 
     public function dashboard(Request $request)
     {
-        $username = $request->query('username', 'Guest'); // Default "Guest" jika username tidak ada
+        $username = $request->query('username', 'Guest'); 
         return view('dashboard', compact('username'));
     }
 

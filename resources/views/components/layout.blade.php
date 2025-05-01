@@ -7,8 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen">
-    {{-- Menambahkan pengecekan untuk tidak menampilkan navbar di halaman login --}}
-    @if(!request()->routeIs('login'))  <!-- Cek apakah bukan halaman login -->
+    @if(!request()->routeIs('login'))
         <x-navbar />
     @endif
 

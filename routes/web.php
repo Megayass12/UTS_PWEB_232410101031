@@ -23,4 +23,4 @@ Route::get('/', [PageController::class, 'login'])->name('login');
 Route::post('/login', [PageController::class, 'authenticate'])->name('authenticate');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/profile', [PageController::class, 'profile'])->name('profile');
-Route::get('/pengelolaan', [PageController::class, 'pengelolaan'])->name('pengelolaan');
+Route::get('/todo', [PageController::class, 'todo'])->name('todo');

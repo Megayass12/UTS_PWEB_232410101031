@@ -1,5 +1,4 @@
-// resources/views/profile.blade.php
-@extends('layout')
+@extends('components.layout')
 @section('title', 'Profile')
 @section('content')
 <h1 class="text-2xl font-bold">Profile</h1>

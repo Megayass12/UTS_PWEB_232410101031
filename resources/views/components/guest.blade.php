@@ -7,7 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>@yield('title')</title>
 </head>
+
 <body>
     @yield('content')
 </body>
+
 </html>

@@ -1,3 +1,3 @@
-<footer class="bg-gray-800 text-white p-4 text-center">
-    <p>&copy; 2025 My To-Do List App</p>
+<footer class="bg-pink-300 text-center py-4 text-pink-600 text-sm shadow-inner">
+    © MegaVerse 2025 To-Do List App
 </footer>

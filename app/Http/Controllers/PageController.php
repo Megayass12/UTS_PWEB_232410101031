@@ -19,29 +19,16 @@ class PageController extends Controller
     if ($username === 'mega' && $password === '123') {
         return redirect()->route('dashboard', ['username' => $username]);
     }
-
-    return redirect()->route('login')->with('error', 'Username atau password salah.');
+    return redirect()->route('login', ['error' => 'Username atau password salah.']);
     }
-
     public function dashboard(Request $request)
     {
-        $username = $request->query('username', 'Guest'); 
+        $username = $request->query('username', 'Guest');
         return view('dashboard', compact('username'));
     }
-
     public function profile(Request $request)
     {
         $username = $request->query('username');
         return view('profile', compact('username'));
-    }
-
-    public function pengelolaan()
-    {
-        $tasks = [
-            ['title' => 'Task 1', 'status' => 'Completed'],
-            ['title' => 'Task 2', 'status' => 'Pending'],
-            ['title' => 'Task 3', 'status' => 'In Progress']
-        ];
-        return view('pengelolaan', compact('tasks'));
     }
 }

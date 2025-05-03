@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>MegaVerse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-    @if(!request()->routeIs('login'))
-        <x-navbar />
-    @endif
-
-    <div class="container mx-auto py-8">
+<body class="bg-pink-50">
+    @include('components.navbar')
+    <main class="min-h-screen">
         @yield('content')
-    </div>
-
-    <x-footer />
+    </main>
+    @include('components.footer')
 </body>
 </html>

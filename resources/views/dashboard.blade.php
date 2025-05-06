@@ -2,7 +2,7 @@
 @section('title','MegaVerse | Track Your Assignment!')
 @section('content')
 <div class="text-center py-12 bg-pink-100 rounded-2xl m-6 shadow-md">
-    <h1 class="text-4xl text-pink-600 font-extrabold mb-4">Welcome {{ $username ?? 'Guest' }}!</h1>
+    <h1 class="text-4xl text-pink-600 font-extrabold mb-4">Welcome {{ $username }}!</h1>
     <div id="realtime-clock" class="bg-white border-2 border-pink-300 rounded-lg px-4 py-2 text-lg absolute top-40 right-30 text-lg font-bold text-pink-600 shadow-lg"></div>
     <div class="flex justify-center">
         <img src="https://i.pinimg.com/736x/49/e8/5f/49e85f7dc65d4d5926a76717fea13d14.jpg"
@@ -19,7 +19,7 @@
             }
         }
         .animate-bounce-slow {
-            animation: bounceSlow 2s infinite; 
+            animation: bounceSlow 2s infinite;
         }
     </style>
     <p class="text-pink-500 mt-4 text-lg">Tracking your activity, be productive with <span class="font-bold">MegaVerse!</span></p>

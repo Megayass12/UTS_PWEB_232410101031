@@ -22,7 +22,7 @@ class PageController extends Controller
     }
     public function dashboard(Request $request)
     {
-        $username = $request->query('username', 'Guest');
+        $username = $request->query('username');
         return view('dashboard', compact('username'));
     }
     public function profile(Request $request)

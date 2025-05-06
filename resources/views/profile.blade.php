@@ -5,7 +5,7 @@
     <h1 class="text-4xl text-pink-600 font-bold mb-4">My Profile</h1>
     <p class="text-lg text-pink-600">Hi, {{ $username }}!</p>
     <div class="flex justify-center my-6">
-        <div class="bg-pink-300 p-6 rounded-xl shadow-lg w-1/4">
+        <div class="bg-pink-300 p-6 rounded-xl shadow-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4">
             <img src="{{ asset('image/MEGAVERSE.png') }}"
                  alt="Profile Picture"
                  class="w-24 h-24 object-cover rounded-full border-4 border-pink-600 mx-auto mb-4">
